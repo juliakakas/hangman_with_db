@@ -1,20 +1,17 @@
 package hu.progmatic.hangman_with_db.service;
 
 import hu.progmatic.hangman_with_db.model.Game;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
-
+@Data
+@AllArgsConstructor
 @Service
 public class GameService {
     private WordService wordService;
     private Game game;
-
-    public GameService(WordService wordService, Game game) {
-        this.wordService = wordService;
-        this.game = game;
-        newGame();
-    }
 
     public Game getGame() {
         return game;

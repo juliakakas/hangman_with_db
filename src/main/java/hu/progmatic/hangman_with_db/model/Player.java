@@ -1,7 +1,9 @@
 package hu.progmatic.hangman_with_db.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 public class Player {
     @Id
@@ -20,27 +22,4 @@ public class Player {
         this.score = score;
     }
 
-    public Long getAzonosító() {
-        return azonosító;
-    }
-
-    public void setAzonosító(Long azonosító) {
-        this.azonosító = azonosító;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
 }
